@@ -22,23 +22,32 @@ p {
 #thumbnails {
   position: relative;
   display: block;
-  display:flex;
-  flex-wrap:wrap;
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #bigimage {
   height: 300px;
   width: 100%;
-  object-fit:cover;
+  object-fit: cover;
+  margin-top: 20px;
 }
 
-.thumb {
-  flex:1;
-  margin: 5px;
+.thumb,
+.thumb-selected {
+  flex: 1;
   height: 100px;
   width: 100px;
   display: block;
   cursor: pointer;
-  object-fit:cover;
+  object-fit: cover;
+}
+
+.thumb {
+  margin: 5px;
+}
+
+.thumb-selected {
+  border: 4px solid limegreen;
+  margin: 1px;
 }

@@ -6,24 +6,26 @@ export default function App() {
   const [bigImage, setBigImage] = useState({
     src:
       "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60",
-    alt: "London"
+    alt: "London",
+    thumbKey: 0
   });
 
-  function handleClick(img, city) {
+  function handleClick(img, city, index) {
     setBigImage({
       src: img,
-      alt: city
+      alt: city,
+      thumbKey: index
     });
   }
 
   const images = imagesArr.map((elem, index) => {
     return (
       <img
-        className="thumb"
+        className={bigImage.thumbKey === index ? "thumb-selected" : "thumb"}
         src={elem.img}
         alt={elem.city}
         key={index}
-        onClick={() => handleClick(elem.img, elem.city)}
+        onClick={() => handleClick(elem.img, elem.city, index)}
       />
     );
   });
