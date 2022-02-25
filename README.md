@@ -1,2 +1,3 @@
-# React-state-homework
-Created with CodeSandbox
+# React State Homework
+
+Created by JAJoyce with CodeSandbox
